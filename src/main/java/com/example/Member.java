@@ -66,14 +66,21 @@ public class Member {
     }
 
     void print() {
-        String tempID = this.memberID;
+        String tempID = this.getID();
         String tempFirst_Name = this.getFirst_name();
         String tempLast_Name = this.getLast_name();
         String tempEmail = this.getEmail();
         int tempAge = this.getAge();
         int[] tempMonthly_Visits = this.getMonthly_visits();
 
-        System.out.println(tempID + " " + tempFirst_Name);
+        System.out.println(
+                tempID + "  " + "First Name: " + tempFirst_Name + "  " +
+                "Last Name: " + tempLast_Name + "  " + "Email: " + tempEmail + "  " +
+                "Age: " + tempAge + "  " + "Number of visits: " + tempMonthly_Visits[0] +
+                ", " + tempMonthly_Visits[1] + ", " + tempMonthly_Visits[2]
+        );
+
+
     }
 
 }
