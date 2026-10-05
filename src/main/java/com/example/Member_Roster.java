@@ -1,6 +1,7 @@
 package com.example;
 
 import java.util.ArrayList;
+import org.apache.commons.validator.routines.EmailValidator;
 
 public class Member_Roster {
     ArrayList<Member> members = new ArrayList<Member>();
@@ -14,7 +15,9 @@ public class Member_Roster {
     public void remove(String memberID) {
         boolean result = members.removeIf(member -> member.getID().equals(memberID));
         if (!result) {
-            System.out.println("Member not found");
+            System.out.println("Error: Member with ID " + memberID + " not found");
+        } else {
+            System.out.println("Removed member with ID: " + memberID);
         }
     }
 
@@ -24,9 +27,8 @@ public class Member_Roster {
         }
     }
 
-    public void print_average_monthly_visits(String memberID) {
+    public void print_average_monthly_visits() {
         for (Member member : members) {
-            if (member.getID().equals(memberID)) {
                 int[] monthlyVisits = member.getMonthly_visits();
                 int totalVisits = 0;
                 int monthCount = monthlyVisits.length;
@@ -37,8 +39,17 @@ public class Member_Roster {
 
                 int averageMonthlyVisits = totalVisits / monthCount;
 
-                System.out.println("Average monthly visits: " + averageMonthlyVisits);
+                System.out.println("Member " + member.getID() + " average monthly visits: " + averageMonthlyVisits);
+        }
+    }
 
+    public void print_invalid_emails() {
+        EmailValidator validator = EmailValidator.getInstance();
+
+        for (Member member : members) {
+            boolean isValid = validator.isValid(member.email);
+            if (!isValid) {
+                System.out.println("Invalid email: " + member.email + "\n");
             }
         }
     }
