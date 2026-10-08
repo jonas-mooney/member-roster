@@ -9,12 +9,12 @@ public class Member {
     private int[] monthlyVisits;
 
     public Member(String ID, String first_name, String last_name, String email, int age, int[] monthly_visits) {
-        this.memberID = ID;
-        this.firstName = first_name;
-        this.lastName = last_name;
-        this.email = email;
-        this.age = age;
-        this.monthlyVisits = monthly_visits;
+        this.setID(ID);
+        this.setFirst_name(first_name);
+        this.setLast_name(last_name);
+        this.setEmail(email);
+        this.setAge(age);
+        this.setMonthly_visits(monthly_visits);
     }
 
     public String getID() {
