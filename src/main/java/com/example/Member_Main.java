@@ -44,7 +44,6 @@ public class Member_Main {
 
         System.out.println(" ");
 
-
         roster.remove("3");
 
         roster.remove("3");
