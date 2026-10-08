@@ -1,12 +1,12 @@
 package com.example;
 
 public class Member {
-    String memberID;
-    String firstName;
-    String lastName;
-    String email;
-    int age;
-    int[] monthlyVisits;
+    private String memberID;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private int age;
+    private int[] monthlyVisits;
 
     public Member(String ID, String first_name, String last_name, String email, int age, int[] monthly_visits) {
         this.memberID = ID;

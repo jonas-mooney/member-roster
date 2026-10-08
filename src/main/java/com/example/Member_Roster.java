@@ -47,9 +47,9 @@ public class Member_Roster {
         EmailValidator validator = EmailValidator.getInstance();
 
         for (Member member : members) {
-            boolean isValid = validator.isValid(member.email);
+            boolean isValid = validator.isValid(member.getEmail());
             if (!isValid) {
-                System.out.println("Invalid email: " + member.email + "\n");
+                System.out.println("Invalid email: " + member.getEmail() + "\n");
             }
         }
     }
