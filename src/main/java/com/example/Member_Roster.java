@@ -27,8 +27,9 @@ public class Member_Roster {
         }
     }
 
-    public void print_average_monthly_visits() {
+    public void print_average_monthly_visits(String memberID) {
         for (Member member : members) {
+            if (member.getID() == memberID) {
                 int[] monthlyVisits = member.getMonthly_visits();
                 int totalVisits = 0;
                 int monthCount = monthlyVisits.length;
@@ -40,6 +41,7 @@ public class Member_Roster {
                 int averageMonthlyVisits = totalVisits / monthCount;
 
                 System.out.println("Member " + member.getID() + " average monthly visits: " + averageMonthlyVisits);
+            }
         }
     }
 

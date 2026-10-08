@@ -74,10 +74,10 @@ public class Member {
         int[] tempMonthly_Visits = this.getMonthly_visits();
 
         System.out.println(
-                tempID + "  " + "First Name: " + tempFirst_Name + "  " +
-                "Last Name: " + tempLast_Name + "  " + "Email: " + tempEmail + "  " +
-                "Age: " + tempAge + "  " + "Number of visits: " + tempMonthly_Visits[0] +
-                ", " + tempMonthly_Visits[1] + ", " + tempMonthly_Visits[2]
+                tempID + "  " + "First Name: " + tempFirst_Name + " " +
+                "Last Name: " + tempLast_Name + "   " +
+                "Age: " + tempAge + "   " + "Monthly Visits: {" + tempMonthly_Visits[0] +
+                ", " + tempMonthly_Visits[1] + ", " + tempMonthly_Visits[2] + "}"
         );
 
 

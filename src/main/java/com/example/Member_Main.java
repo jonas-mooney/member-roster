@@ -38,7 +38,9 @@ public class Member_Main {
 
         roster.print_invalid_emails();
 
-        roster.print_average_monthly_visits();
+        for (Member member : roster.members) {
+        roster.print_average_monthly_visits(member.getID());
+        }
 
         System.out.println(" ");
 
