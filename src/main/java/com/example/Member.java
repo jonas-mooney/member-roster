@@ -75,7 +75,7 @@ public class Member {
 
         System.out.println(
                 tempID + "  " + "First Name: " + tempFirst_Name + " " +
-                "Last Name: " + tempLast_Name + "   " +
+                "Last Name: " + tempLast_Name + "   " + "Email: " + tempEmail + "   " +
                 "Age: " + tempAge + "   " + "Monthly Visits: {" + tempMonthly_Visits[0] +
                 ", " + tempMonthly_Visits[1] + ", " + tempMonthly_Visits[2] + "}"
         );
